@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background: #1e2494;
+                font-family: sans-serif;
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo {
+                width: 400px;
+                max-width: 80%;
+                display: inline-block;
+            }
+
+            input {
+                background: #0b0b0b;
+                color: white;
+                outline: none;
+                border: unset;
+                padding: 8px 12px;
+                user-select: none;
+                caret-color: #4e9a06;
+                font-family: monospace;
+            }
+
+            button {
+                padding: 12px 16px;
+                background: #0b0b0b;
+                color: white;
+                border-radius: 2px;
+                border: unset;
+                outline: none;
+                user-select: none;
+                cursor: pointer;
+            }
+
+            .title {
+                font-size: 18px;
+                color: white;
+                margin-top: 30px;
+            }
+
+            .description {
+                font-size: 12px;
+                color: white;
+            }
+
+            .file {
+                width: 400px;
+                max-width: 80%;
+                background: wheat;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 14px;
+                padding: 10px;
+                color: black;
+            }
+
+            .hidden {
+                display: none;
+            }
+            
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://i.imgur.com/xyUm7KQ.png" />
+        <div class="title">Encrypted file</div>
+        <div class="description">Please enter the 12-digit decrypt key below.</div>
+        <input type="text" id="code">
+        <button id="submit">Decrypt file</button>
+        <div class="file hidden" id="file">
+            Congratulations, Agent.
+            <br><br>
+            You have passed the entry test into <strong>FNIB</strong>'s most prestigious department, the Behavioral Analysis Unit. If you choose to accept this position, you can report back to me. But keep this under wraps, there are other agents still taking the test.
+            <br><br>
+            SSA voidnyan<br>
+            <em>Unit Chief of Behavioral Analysis Unit<br>
+            Federal Nyan Investigation Bureau</em>
+        </div>
+    </div>
+
+    <script>
+        function handleClick() {
+            // Please dont cheat
+            const input = document.querySelector("#code");
+            const value = input.value;
+            const code = "7k5y3i0vral5";
+            if (value === code) {
+                document.querySelector("#file").classList.remove("hidden");
+            }
+        }
+        document.querySelector("#submit").addEventListener("click", handleClick);
+    </script>
+</body>
+</html>
