@@ -1,2 +1,1 @@
-# fnib
-AniList detective puzzle
+Please don't cheat by looking into the code :)
