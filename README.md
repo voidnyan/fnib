@@ -1,0 +1,2 @@
+# fnib
+AniList detective puzzle
